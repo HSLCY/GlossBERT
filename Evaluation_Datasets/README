@@ -1,0 +1,67 @@
+=================================================================================================================================
+						WORD SENSE DISAMBIGUATION
+				A UNIFIED EVALUATION FRAMEWORK AND EMPIRICAL COMPARISON
+
+				Alessandro Raganato, Jose Camacho-Collados and Roberto Navigli
+=================================================================================================================================
+
+
+This package contains five Word Sense Disambiguation evaluation datasets, the concatenation of all five datasets and a scorer:
+
+
+* Senseval 2 (Edmons and Cotton, 2001)
+
+* Senseval 3, task 1 (Snyder and Palmer, 2004)
+
+* SemEval 2007, task 17 (Pradhan et al. 2007)
+
+* SemEval 2013, task 12 (Navigli et al. 2013) 
+
+* SemEval 2015, task 13 (Moro and Navigli, 2015)
+
+* ALL: The concatentation of the previous five evaluation datasets.
+
+Each dataset consists of a data file [dataset].data.xml and a gold file [dataset].gold.key.txt. 
+All senses are annotated with WordNet 3.0.
+
+
+=================================================================================================================================
+SCORER
+=================================================================================================================================
+
+This scorer ("Scorer.java") is a modification of the offical scorer of the SemEval 2015 all-words WSD task. 
+To use the scorer, you first need to compile:
+
+	$ javac Scorer.java
+
+Then, evaluate your system by typing the following command: java Scorer [gold-standard] [system-output]
+
+Example of usage:
+
+	$ java Scorer semeval2013/semeval2013.gold.key.txt semeval2013/output.key
+
+Please note that the official scoring programs are case sensitive and may be sensitive if a different default character encoding 
+is used.  The answer format is the same of the gold-standard format. 
+
+=================================================================================================================================
+REFERENCE PAPER
+=================================================================================================================================
+
+When using these resources, please refer to the following paper (included in the package as "EACL17_WSD_EvaluationFramework.pdf"):
+
+	Alessandro Raganato, Jose Camacho-Collados and Roberto Navigli. 
+	Word Sense Disambiguation: A Unified Evaluation Framework and Empirical Comparison
+	In Proceedings of European Chapter of the Association for Computational Linguistics (EACL), 
+	Valencia, Spain, April 3-7, 2017. 
+
+If you use any of the above-mentioned datasets, please also cite the corresponding reference paper of the task.
+
+=================================================================================================================================
+CONTACT
+=================================================================================================================================
+ 
+If you have any enquiries about any of the resources, please contact José Camacho Collados (collados [at] di.uniroma1 [dot] it) 
+or Alessandro Raganato (raganato [at] di.uniroma1 [dot] it).
+
+=================================================================================================================================
+
