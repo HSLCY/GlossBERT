@@ -2,6 +2,20 @@
 
 Codes and corpora for paper "[GlossBERT: BERT for Word Sense Disambiguation with Gloss Knowledge](https://www.aclweb.org/anthology/D19-1355.pdf)" (EMNLP 2019)
 
+## News
+
+--> **Now the checkpoint of GlossBERT (Sent_CLS_WS) is available at: https://drive.google.com/file/d/1iq_h3zLTflraEU_7tVLnPcVQTeyGDNKE/view?usp=sharing.**
+
+Recently we have received several requests for the checkpoint of our best model in the paper. Thanks for their attention to our work. As they mentioned in the email, it is quite expensive to train the model. However, the original checkpoint implemented more than half a year ago was lost during the upgrade of the server. Thus, we spend some time to train a new one under the same hyperparameters recent days. 
+
+Note: the the GPUs on the server were changed from Tesla V100-PCIE to Tesla V100-SXM2, so the results of this checkpoint on the evaluation datasets might be slightly different (but certainly comparable) from the original version in our paper:
+
+|                  | SE07 | SE2  | SE3  | SE13 | SE15 | ALL (4 test sets) |
+| ---------------- | ---- | ---- | ---- | ---- | ---- | ----------------- |
+| original version | 72.5 | 77.7 | 75.2 | 76.1 | 80.4 | 77.0              |
+| this checkpoint  | 72.1 | 77.8 | 75.9 | 76.8 | 79.3 | 77.2              |
+
+
 ## Dependencies
 
 * pytorch: 1.0.0
