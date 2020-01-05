@@ -1,6 +1,6 @@
 # GlossBERT
 
-Codes and corpora for paper "[GlossBERT: BERT for Word Sense Disambiguation with Gloss Knowledge](https://www.aclweb.org/anthology/D19-1355.pdf)" (EMNLP 2019)
+Codes and corpora for paper "[GlossBERT: BERT for Word Sense Disambiguation with Gloss Knowledge](https://arxiv.org/pdf/1908.07245.pdf)" (EMNLP 2019)
 
 ## News
 
