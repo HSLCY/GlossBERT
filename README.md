@@ -13,7 +13,7 @@ Note: the the GPUs on the server were changed from Tesla V100-PCIE to Tesla V100
 |                  | SE07 | SE2  | SE3  | SE13 | SE15 | ALL (4 test sets) |
 | ---------------- | ---- | ---- | ---- | ---- | ---- | ----------------- |
 | original version | 72.5 | 77.7 | 75.2 | 76.1 | 80.4 | 77.0              |
-| this checkpoint  | 72.1 | 77.8 | 75.9 | 76.8 | 79.3 | 77.2              |
+| this checkpoint  | 72.1 | 77.7 | 75.9 | 76.8 | 79.3 | 77.2              |
 
 
 ## Dependencies
@@ -29,7 +29,7 @@ Note: the the GPUs on the server were changed from Tesla V100-PCIE to Tesla V100
 
 We generate datasets for GlossBERT based on the evaluation framework of [Raganato et al. ](<http://lcl.uniroma1.it/wsdeval/>) and [WordNet 3.0](https://wordnet.princeton.edu/). 
 
-Run following commands to prepare datasets for tasks and extract vocabulary information from `./wordnet/index.sense` (if you only need the processed datasets, download [here](https://drive.google.com/file/d/1EaAXzVQRI29c3pO8BcKxzrBNgWA5pktR/view?usp=sharing)):
+Run following commands to prepare datasets for tasks and extract vocabulary information from `./wordnet/index.sense` (if you only need the processed datasets, download [here](https://drive.google.com/file/d/1OA-Ux6N517HrdiTDeGeIZp5xTq74Hucf/view?usp=sharing)):
 
 ```
 bash preparation.sh
