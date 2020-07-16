@@ -173,10 +173,11 @@ def convert_examples_to_features(examples, label_list, max_seq_length,
                 target_to_tok_map_end = len(bert_tokens)
                 break
             bert_tokens.extend(tokenizer.tokenize(orig_tokens[length]))
+        if target_end == len(orig_tokens):
+            target_to_tok_map_end = len(bert_tokens)
         # bert_tokens.append("[SEP]")
         bert_tokens = tokenizer.tokenize(example.text_a)
-        bert_tokens = ["[CLS]"] + bert_tokens + ["[SEP]"]
-        segment_ids = [0] * len(bert_tokens)
+
 
 
         tokens_b = None
@@ -191,8 +192,8 @@ def convert_examples_to_features(examples, label_list, max_seq_length,
             if len(tokens_a) > max_seq_length - 2:
                 tokens_a = tokens_a[:(max_seq_length - 2)]
 
-
-        # assert len(bert_tokens) <= max_seq_length, "sentence must be shorter than max_seq_length"
+        bert_tokens = ["[CLS]"] + bert_tokens + ["[SEP]"]
+        segment_ids = [0] * len(bert_tokens)
 
         bert_tokens += tokens_b + ["[SEP]"]
         segment_ids += [1] * (len(tokens_b) + 1)
