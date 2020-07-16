@@ -53,6 +53,8 @@ def generate_auxiliary(gold_key_file_name, train_file_name, train_file_final_nam
                 if w == start_id or w == end_id:
                     sentence.append('"')
                 sentence.append(orig_sentence[w])
+            if end_id == len(orig_sentence):
+                sentence.append('"')
             sentence = ' '.join(sentence)
             orig_word = ' '.join(orig_sentence[start_id:end_id])
             
